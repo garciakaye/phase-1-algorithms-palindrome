@@ -1,9 +1,18 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+function isPalindrome(str) {
+  let strLe = str.length;
+  if (strLe === 0 || strLe === 1) {
+    return true;
+  }
+  if (str[0] === str[strLe - 1]) {
+    return isPalindrome(str.slice(1, strLe - 1) );
+  }  
+  return false;
+};
+
 
 /* 
-  Add your pseudocode here
+  Return true is string is a palindrome
+  return false if not
 */
 
 /*
